@@ -8,19 +8,23 @@ export default async function handleProfileSignup(
 ) {
   const results = [];
 
-  try {
-    const user = await signUpUser(firstName, lastName);
-    results.push({ status: 'fulfilled', value: user });
-  } catch (error) {
-    results.push({ status: 'rejected', value: error });
-  }
+  const userPromise = signUpUser(firstName, lastName)
+    .then((user) => {
+      results.push({ status: 'fulfilled', value: user });
+    })
+    .catch((error) => {
+      results.push({ status: 'rejected', value: error });
+    });
 
-  try {
-    const photo = await uploadPhoto(fileName);
-    results.push({ status: 'fulfilled', value: photo });
-  } catch (error) {
-    results.push({ status: 'rejected', value: error });
-  }
+  const photoPromise = uploadPhoto(fileName)
+    .then((photo) => {
+      results.push({ status: 'fulfilled', value: photo });
+    })
+    .catch((error) => {
+      results.push({ status: 'rejected', value: error });
+    });
+
+  await Promise.allSettled([userPromise, photoPromise]);
 
   return results;
 }
