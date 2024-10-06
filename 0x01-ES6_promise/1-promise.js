@@ -9,6 +9,6 @@ export default function (boolean) {
       resolve(object);
     } else {
       reject(Error('The fake API is not working currently'));
-		}
+    }
   });
 }
