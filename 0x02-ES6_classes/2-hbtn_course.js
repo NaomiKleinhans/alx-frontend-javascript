@@ -9,7 +9,7 @@ export default class HolbertonCourse {
     }
 
     this._name = name;
-	  this._length = length;
+    this._length = length;
     this._students = students;
   }
 
