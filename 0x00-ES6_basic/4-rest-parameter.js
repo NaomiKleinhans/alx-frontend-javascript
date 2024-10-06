@@ -1,3 +1,3 @@
-export default function sum(...args) {
-	return args.reduce((acc, curr) => acc + curr, 0) // Sum all arguments
+export default function returnHowManyArguments(...theArgs) {
+	return theArgs.length
 }

@@ -1,6 +1,9 @@
-export const add = (a, b) => a + b; 
+export default function getNeighborhoodsList() {
+	this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square']
 
-export const createStudent = (name, age) => ({
-	name,
-	age
-})
+	const self = this
+	this.addNeighborhood = (newNeighborhood) => {
+		self.sanFranciscoNeighborhoods.push(newNeighborhood)
+		return self.sanFranciscoNeighborhoods
+	}
+}

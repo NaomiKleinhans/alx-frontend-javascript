@@ -1,3 +1,7 @@
-export default function divide(a, b = 1) {
-	return a / b // Default value for b is 1
+export default function getSumOfHoods(
+	initialNumber,
+	expansion1989 = 89,
+	expansion2019 = 19
+) {
+	return initialNumber + expansion1989 + expansion2019
 }
