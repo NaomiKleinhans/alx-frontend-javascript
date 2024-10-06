@@ -2,7 +2,7 @@ export default function (boolean) {
   return new Promise((resolve, reject) => {
     const object = {
       status: 200,
-      body: 'Success'
+      body: 'Success',
     };
 
     if (boolean === true) {
