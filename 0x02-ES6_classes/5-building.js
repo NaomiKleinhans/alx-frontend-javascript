@@ -9,7 +9,7 @@ export default class Building {
       );
     }
 
-		this._sqft = sqft;
+    this._sqft = sqft;
   }
 
   get sqft() {
