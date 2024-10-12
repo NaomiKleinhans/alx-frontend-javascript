@@ -1,6 +1,6 @@
 // Arrow function that updates student grades by city
-const updateStudentGradeByCity = (students, city, newGrades) => {
-  return students.filter((student) => student.location === city)
+const updateStudentGradeByCity = (students, city, newGrades) =>
+  students.filter((student) => student.location === city)
     .map((student) => {
       // Find the grade for the current student, or default to 'N/A'
       const gradeObj = newGrades.find(
@@ -12,7 +12,6 @@ const updateStudentGradeByCity = (students, city, newGrades) => {
         grade: gradeObj ? gradeObj.grade : 'N/A',
       };
     });
-};
 
 // Export the arrow function as default
 export default updateStudentGradeByCity;
