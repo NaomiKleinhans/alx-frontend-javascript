@@ -1,6 +1,5 @@
 // Arrow function that updates student grades by city
 const updateStudentGradeByCity = (students, city, newGrades) =>
-  // Filter students based on the city
   students.filter((student) => student.location === city)
     .map((student) => {
       // Find the grade for the current student, or default to 'N/A'
