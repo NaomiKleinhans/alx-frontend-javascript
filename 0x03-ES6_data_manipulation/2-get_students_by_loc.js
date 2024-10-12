@@ -5,9 +5,9 @@ const getStudentsByLocation = (students, city) => {
     return [];
   }
 
-  // Use the filter method to return only students whose location matches the given city (case-insensitive)
-  return students.filter(
-    (student) => student.location.toLowerCase() === city.toLowerCase()
+  // Use the filter method to return only students whose location matches
+	return students.filter(
+		(student) => student.location.toLowerCase() === city.toLowerCase(),
   );
 };
 
