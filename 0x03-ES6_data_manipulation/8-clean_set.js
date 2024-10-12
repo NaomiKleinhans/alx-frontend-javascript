@@ -6,7 +6,7 @@ const cleanSet = (set, startString) => {
   // Convert set to an array, filter, map, and join values
   const values = [...set]
     .filter(
-      (value) => typeof value === 'string' && value.startsWith(startString)
+      (value) => typeof value === 'string' && value.startsWith(startString),
     )
     .map((value) => value.slice(startString.length))
     .join('-');
