@@ -1,5 +1,5 @@
 // Arrow function that updates student grades by city
-const updateStudentGradeByCity = (students, city, newGrades) => {
+const updateStudentGradeByCity = (students, city, newGrades) => 
   // Filter students based on the city
   students
     .filter((student) => student.location === city)
@@ -14,7 +14,6 @@ const updateStudentGradeByCity = (students, city, newGrades) => {
         grade: gradeObj ? gradeObj.grade : 'N/A',
       };
     });
-};
 
 // Export the arrow function as default
 export default updateStudentGradeByCity;
