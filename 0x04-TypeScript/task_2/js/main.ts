@@ -62,6 +62,9 @@ function executeWork(employee: Teacher | Director): string {
 	} else if (employee instanceof Teacher) {
 		return employee.workTeacherTasks();
 	}
+
+	// If employee doesn't match either case, default return
+	return 'Invalid employee';
 }
 
 console.log(executeWork(createEmployee(200)));
@@ -77,6 +80,9 @@ function teachClass(todayClass: Subjects): string {
 	} else if (todayClass === 'History') {
 		return `Teaching History`;
 	}
+
+	// Fallback in case other subjects are passed (optional)
+	return 'Invalid subject';
 }
 
 console.log(teachClass('Math'));
